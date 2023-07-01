@@ -3,13 +3,13 @@ name: Publish Container image
 
 on:
   push:
-    branches:
-      - latest
+    tags:
+      - 'v*'
     paths:
       - '**Containerfile**'
   pull_request:
-    branches:
-      - latest
+    tags:
+      - 'v*'
     paths:
       - '**Containerfile**'
   workflow_dispatch:
@@ -58,7 +58,7 @@ jobs:
 
       - name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           platforms: linux/amd64,linux/arm64,linux/arm/8,linux/arm/7,linux/arm/6
           context: .
