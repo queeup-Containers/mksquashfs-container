@@ -1,4 +1,6 @@
-# mksquashfs in a container
+# Deprecated. Use [squashfs-container](https://github.com/queeup/squashfs-container) instead.
+
+## mksquashfs in a container
 
 ## Pull
 
